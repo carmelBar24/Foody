@@ -14,7 +14,7 @@ body{
     margin-left: 30px;
 }
 .fa-2x{
-    color: #ff7f50;
+    color:#5984DE;
 }
 .socialNetwork a .fa-facebook:hover{
     color: #3b5998
@@ -90,7 +90,7 @@ li{
     grid-template-columns: 5fr 2fr 3fr;
     margin-top:0px;
     align-items: center;
-    background-color:#FDFAF3;
+    background-color:floralwhite;
     height: 20vh;
 }
 #main-nav .container ul{
@@ -102,8 +102,8 @@ li{
 
 }
 #main-nav .container ul li .currentPage{
-    background-color:#ff7f50 ;
-    color: honeydew;
+    background-color:#E2F3FF;
+    color: blue;
     border-radius: 15px;
     padding: 10px;
     transition:all 0.2s ease-in-out;
@@ -112,7 +112,7 @@ li{
    box-shadow: #efd9b5 5px 5px;
 }
 #main-nav .container ul li a{
-    color: #ff7f50;
+    color: #3b5998;
     font-size:larger;
 }
 /*buttons*/
@@ -226,7 +226,7 @@ li{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap:1.5rem;
-    background-color:#FDFAF3;
+    background-color:#fffcf6;
     grid-template-area: "a b c d e";
 }
 #footer input{

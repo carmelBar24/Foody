@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Foody-Look On Food</title>
+    <!--icon&Links -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../photos/favicon.ico"/>
+    <script src="https://kit.fontawesome.com/a2c8454904.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)"  href="../css/mobile.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav id="main-nav">
+    <div class="container">
+        <div>
+         <img src="../photos/mainPhoto.png" alt="בלוג אוכל" class="logo">
+        </div>
+        <script type="text/javascript">
+            const hour = new Date().getHours();
+            const welcomeTypes = ["Good morning", "Good afternoon", "Good evening"];
+            let welcomeText = "";
+
+            if (hour < 12) welcomeText = welcomeTypes[0];
+            else if (hour < 18) welcomeText = welcomeTypes[1];
+            else welcomeText = welcomeTypes[2];
+
+            let url="http://localhost:3000/test";
+            fetch(url).then(response => response.json())
+                .then( (result) => {
+                    let div=document.getElementById('test');
+                    if(result.name!=="") {
+                        div.innerHTML = `${welcomeText}: ${result.name}`;
+                    }
+                })
+        </script>
+        <div class="socialNetwork">
+            <a href="http://facebook.com"  target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="http://twitter.com"  target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="http://instagram.com"  target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="http://youtube.com"  target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+        </div>
+        <ul>
+            <li ><a href="sign_page.html">SignUp</a></li>
+            <li ><a href="login_page.html">Login</a></li>
+            <li ><a class="currentPage" href="home_page.html">Home</a></li>
+            <li><a href="about_page.html">About</a></li>
+            <li><a  href="recipes_page.html">Recipes</a></li>
+            <li><a href="search_page.html">Search</a></li>
+        </ul>
+    </div>
+</nav>
+<header id="showCase">
+    <div class="container">
+        <div class="showCase-content">
+            <h1>Pull up a chair and join us, Where every bite tells a story.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusamus adipisci delectus dolore dolorem,<br>
+                doloremque impedit iure magnam maiores non odio possimus.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, voluptates!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, natus.
+            </p>
+            <a href="about_page.html" class="button">Read More</a>
+        </div>
+        <div class="showCase-logo">
+        <img src="../photos/showcase_logo.png" alt="logo">
+        </div>
+        <div class="showCase-lottie">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_zdep99ge.json"  background="transparent"  speed="1"  style="width: 500px; height: 500px;"  loop  autoplay></lottie-player>
+        </div>
+    </div>
+</header>
+<section id="Home-recipe">
+    <div class="container">
+        <h1>Editor Picks</h1>
+        <div class="recipe-container">
+            <article class="recipe">
+                <img src="../photos/recipe1.jpg">
+                <div>
+                    <div class="category category-morning">Morning</div>
+                    <h3><a href="recipes1.html">Lorem ipsum dolor sit.</a></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Accusamus adipisci aspernatur assumenda atque corporis cum cumque deserunt dolores,
+                        eligendi enim eveniet excepturi ipsa iste iure maiores neque nesciunt officia
+                        praesentium provident reiciendis reprehenderit repudiandae soluta. Beatae excepturi odio ut.
+                        Accusantium aliquid at minus natus odit saepe. Dolorum earum laboriosam porro!
+                    </p>
+                </div>
+            </article>
+            <article class="recipe">
+                <div class="category category-dessert">Dessert</div>
+                    <h3><a href="recipes2.html">Lorem ipsum dolor sit.</a></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Aperiam at atque corporis cum dolores vitae!
+                    </p>
+                <img src="../photos/recipe2.jpg">
+            </article>
+            <article class="recipe">
+                <img src="../photos/recipe3.jpg">
+                <div class="category category-morning">Morning</div>
+                    <h3><a href="recipes3.html">Lorem ipsum dolor sit.</a></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Aperiam at atque corporis cum dolores vitae!
+                    </p>
+            </article>
+            <article class="recipe">
+                <img src="../photos/recipe4.jpg">
+                <div class="category category-Lunch">Lunch</div>
+                    <h3><a href="recipes4.html">Lorem ipsum dolor sit.</a></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Aperiam at atque corporis cum dolores vitae!
+                    </p>
+            </article>
+            <article class="recipe">
+                <div class="category category-morning">Morning</div>
+                    <h3><a href="recipes5.html">Lorem ipsum dolor sit.</a></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Aperiam at atque corporis cum dolores vitae!
+                    </p>
+                <img src="../photos/recipe5.jpg">
+            </article>
+            <article class="recipe">
+                <img src="../photos/recipe6.jpg">
+                <div class="category category-Lunch">Lunch</div>
+                    <h3><a href="recipes6.html">Lorem ipsum dolor sit.</a></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Aperiam at atque corporis cum dolores vitae!
+                    </p>
+            </article>
+            <article class="recipe">
+                <div>
+                    <div class="category category-dessert">Dessert</div>
+                    <h3><a href="recipes7.html">Lorem ipsum dolor sit.</a></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Esse laboriosam magnam officia omnis rem. Consequatur eaque excepturi odio perspiciatis quas recusandae,
+                        temporibus. Ab animi architecto deserunt, dicta ea id modi molestiae officia
+                        officiis possimus ratione recusandae reprehenderit veritatis. Eos rem similique voluptas?
+                        Consectetur corporis cumque debitis explicabo, maiores nobis quisquam.
+                    </p>
+                </div>
+                <img src="../photos/recipe7.jpg">
+            </article>
+
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="container footer-container">
+        <div>
+            <img src="../photos/mainPhoto.png">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dicta dolorem
+                exercitationem ipsum labore nulla officiis quis quod similique sit! Alias dolorem
+                doloremque dolores earum est harum id illum
+                laborum laudantium molestias praesentium quia quod, sapiente similique sunt tempora tempore.</p>
+        </div>
+        <div>
+            <h3>Email NewsLetter</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem deleniti labore quia rerum voluptatibus.</p>
+            <form name="contact" method="POST" data-netlify="true">
+                <input type="email" name="email" placeholder="Enter your email">
+                <br>
+                <input type="submit" value="Subscribe" class="button email">
+            </form>
+        </div>
+        <div >
+            <h3>Site Links</h3>
+            <ul class="list">
+                <li href="#top">Help & Support</li>
+                <li href="#top">Privacy Policy</li>
+                <li href="#top">About Us</li>
+                <li href="#top">Contact</li>
+            </ul>
+        </div>
+        <div >
+            <h3>Be our friend</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,harum.</p>
+            <a href="" class="button">Join Now</a>
+        </div>
+        <div>
+            <p>Copyright &copy; 2022,All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

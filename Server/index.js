@@ -2,7 +2,9 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const port = 3000
+const port = 3001
+
+//TODO:move to other file
 let mysql = require('mysql');
 let connection = mysql.createConnection({
     host: 'localhost',
@@ -10,16 +12,23 @@ let connection = mysql.createConnection({
     password: '4364',
     database: 'foodblog'
 });
-var path=require('path');
-var paths=["/HomePage.html","/about.html","/recipes.html","/dessert.html","/Login.html","/lunch.html","/morning.html",
-"/recipes1.html","/recipes2.html","/recipes3.html","/recipes4.html","/recipes5.html","/recipes6.html","/recipes7.html",
-"/search.html","/Sign.html","/error.html"];
+
+const path=require('path');
+
+const paths=[
+    "/home_page.html","/about_page.html","/recipes_page.html","/dessert.html","/login_page.html","/lunch.html","/morning.html",
+    "/recipes1.html","/recipes2.html","/recipes3.html","/recipes4.html","/recipes5.html","/recipes6.html","/recipes7.html",
+    "/search_page.html","/sign_page.html","/error.html"];
+
+//TODO:check this
 var user="";
 var logErr="";
 const bcrypt = require('bcrypt');
-// We are using our packages here
+
+
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 
+//TODO:check mobile
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
     extended: true}));
 app.use(cors())
@@ -27,10 +36,11 @@ app.use("/css",  express.static(__dirname + '/public/css'));
 app.use("/js",  express.static(__dirname + '/public/js'));
 app.use("/photos",  express.static(__dirname + '/public/photos'));
 app.use("/css",  express.static(__dirname + '/public/mobile'));
-//You can use this to check if your server is working
+
+//home_page
 app.get('/', (req, res)=>{
     let reqPath = path.join(__dirname, '../')
-    reqPath=path.join(reqPath,"Front/HomePage.html")
+    reqPath=path.join(reqPath,"Front/home_page.html")
     res.sendFile(reqPath);
 });
 
@@ -38,8 +48,9 @@ paths.forEach(function (current) {
     app.get(current, (req, res)=>{
         let reqPath = path.join(__dirname, '../')
         reqPath = path.join(reqPath,"Front");
-        if(current==="/recipes.html"||current==="/search.html")
+        if(current==="/recipes_page.html"||current==="/search_page.html")
         {
+            //TODO:change to email
             if(user==="")
             {
                 reqPath=path.join(reqPath,"/error.html");
@@ -57,6 +68,7 @@ paths.forEach(function (current) {
     });
 })
 
+//TODO:check routs
 
 //Route that handles login logic
 app.post('/login', (req, res) =>{
@@ -116,7 +128,7 @@ app.post('/signup', (req, res) =>{
         res.sendStatus(201)
     });
     let reqPath = path.join(__dirname, '../')
-    reqPath=path.join(reqPath,"Front/Login.html")
+    reqPath=path.join(reqPath,"Front/login_page.html")
     res.sendFile(reqPath);
 
     connection.end(function(err) {
@@ -135,6 +147,7 @@ app.get('/loginError',(req,res)=>{
     console.log("hello");
     res.json({error:logErr});
 })
+
 
 //Start your server on a specified port
 app.listen(port, ()=>{

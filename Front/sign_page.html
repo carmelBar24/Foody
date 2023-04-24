@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Foody-Look On Food</title>
     <!--icon&Links -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../photos/favicon.ico"/>
+    <link rel="shortcut icon" href="photos/favicon.ico"/>
     <script src="https://kit.fontawesome.com/a2c8454904.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="../css/Main.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)"  href="../css/mobile.css">
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,45 +46,32 @@
             <a href="http://youtube.com"  target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
         </div>
         <ul>
-            <li ><a href="Sign.html">SignUp</a></li>
-            <li ><a href="Login.html">Login</a></li>
-            <li ><a href="HomePage.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a  class="currentPage" href="recipes.html">Recipes</a></li>
-            <li><a href="search.html">Search</a></li>
+            <li ><a class="currentPage" href="sign_page.html">SignUp</a></li>
+            <li ><a href="login_page.html">Login</a></li>
+            <li ><a href="home_page.html">Home</a></li>
+            <li><a href="about_page.html">About</a></li>
+            <li><a href="recipes_page.html">Recipes</a></li>
+            <li><a href="search_page.html">Search</a></li>
         </ul>
     </div>
 </nav>
-<section id="recipes">
-    <h1 class="heading">Our Recipes</h1>
-    <div class="container page-category video-container">
-        <article class="recipe recipeVideo video1">
-            <a href="morning.html">
-            <video autoplay muted>
-            <source src="../photos/morning.mp4" type="video/mp4">
-            </video>
-            </a>
-        </article>
-        <article class="recipe recipeVideo video2">
-            <a href="lunch.html">
-            <video autoplay muted>
-                <source src="../photos/lunch.mp4" type="video/mp4">
-            </video>
-            </a>
-        </article>
-        <article class="recipe recipeVideo video3">
-            <a href="dessert.html">
-            <video autoplay muted>
-                <source src="../photos/dessert.mp4" type="video/mp4">
-            </video>
-            </a>
-        </article>
+<section id="Sign" class="register">
+    <div class="container page-container">
+        <form action="http://localhost:3000/signup" method="post" class="mainForm">
+            <h1>Sign Up To Foody</h1><br>
+            <input type="text" name="fullname" placeholder="Full Name"><br><br>
+            <input type="text" name="username" placeholder="User Name"><br><br>
+            <input type="text" name="email" placeholder="Email"><br><br>
+            <input type="password" name="password" placeholder="Password"><br><br>
+            <input type="password" name="passwordConfirm" placeholder="Confirm Password"><br><br>
+            <button type="submit" class="submit">Sign Up</button>
+        </form>
     </div>
 </section>
 <footer id="footer">
     <div class="container footer-container">
         <div>
-            <img src="../photos/mainPhoto.png">
+            <img src="photos/mainPhoto.png">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dicta dolorem
                 exercitationem ipsum labore nulla officiis quis quod similique sit! Alias dolorem
                 doloremque dolores earum est harum id illum

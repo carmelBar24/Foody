@@ -90,7 +90,7 @@ li{
     grid-template-columns: 5fr 2fr 3fr;
     margin-top:0px;
     align-items: center;
-    background-color:#fff5ee;
+    background-color:#FDFAF3;
     height: 20vh;
 }
 #main-nav .container ul{
@@ -129,27 +129,42 @@ li{
 /*Show Case*/
 #showCase{
     position: relative;
-    background: url("../photos/showCase.jpg") center center/cover;
+    background-color: #E2F3FF;
+    border: 5px floralwhite solid;
+    border-radius: 50px;
+    margin: 50px;
 }
 #showCase .container
 {
 
     display: grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:2fr 3fr 1fr;
     justify-content:center;
-    align-items: center;
+    align-items:stretch;
     height: 50vh;
 
 }
 #showCase .container .showCase-content
 {
     line-height: normal;
-    margin-left: 20px;
-    color: honeydew;
+    color: #3b5998;
+    margin: 50px;
 }
 #showCase .container .showCase-content a{
-    background-color:#ff7f50;
+    background-color:#5984DE;
 }
+
+#showCase .container .showCase-logo
+{
+  padding: 100px;
+}
+#showCase .container .showCase-logo img{
+    height: 300px;
+    width: 500px;
+    margin-left: 50px;
+    box-shadow:  0 4px 8px 5px white;
+}
+
 /*Home-recipes*/
 .category{
     border-radius: 15px;
@@ -190,7 +205,7 @@ li{
     grid-column:2/span 2;
 }
 .recipe{
-    background:#fff5ee;
+    background:#FDFAF3;
     padding: 16px;
     border-radius: 10px;
 }
@@ -211,7 +226,7 @@ li{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap:1.5rem;
-    background-color:#fff5ee;
+    background-color:#FDFAF3;
     grid-template-area: "a b c d e";
 }
 #footer input{
@@ -246,7 +261,7 @@ li{
     padding-left: 10px;
 }
 #footer .footer-container>*:last-child{
-    background-color:#ff7f50;
+    background-color:#E2F3FF;
     grid-column:1 /span 4;
     text-align: center;
     font-size: 0.75rem;

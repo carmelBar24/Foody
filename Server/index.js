@@ -90,7 +90,7 @@ app.post('/login', (req, res) =>{
             if (result.length != 0) {
                 console.log("------> User exists")
                 let reqPath = path.join(__dirname, '../')
-                reqPath = path.join(reqPath, "Front/HomePage.html")
+                reqPath = path.join(reqPath, "Front/home_page.html")
                 user = userName;
                 res.sendFile(reqPath);
             }

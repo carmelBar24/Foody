@@ -18,24 +18,6 @@
       <img src="../photos/mainPhoto.png" alt="בלוג אוכל" class="logo">
       <h3 id=test></h3>
     </div>
-    <script type="text/javascript">
-      const hour = new Date().getHours();
-      const welcomeTypes = ["Good morning", "Good afternoon", "Good evening"];
-      let welcomeText = "";
-
-      if (hour < 12) welcomeText = welcomeTypes[0];
-      else if (hour < 18) welcomeText = welcomeTypes[1];
-      else welcomeText = welcomeTypes[2];
-
-      let url="http://localhost:3000/test";
-      fetch(url).then(response => response.json())
-              .then( (result) => {
-                let div=document.getElementById('test');
-                if(result.name!=="") {
-                  div.innerHTML = `${welcomeText}: ${result.name}`;
-                }
-              })
-    </script>
     <div class="socialNetwork">
       <a href="http://facebook.com"  target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
       <a href="http://twitter.com"  target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
@@ -58,8 +40,12 @@
     <h1>Ooops</h1>
     <h3>This page is for users only!</h3>
   </div>
+  <div class="Error-lottie">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_lxthM7IcV7.json"  background="transparent"  speed="1"  style="width: 500px; height: 500px;"  loop  autoplay></lottie-player>
+  </div>
   <div class="back">
-    <a href="HomePage.html" class="button err">Home Page</a>
+    <a href="home_page.html" class="button err">Home Page</a>
     <a href="sign_page.html" class="button err">Sign Up</a>
   </div>
 </article>

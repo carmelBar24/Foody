@@ -20,24 +20,6 @@
       <img src="../photos/mainPhoto.png" alt="בלוג אוכל" class="logo">
       <h3 id=test></h3>
     </div>
-    <script type="text/javascript">
-      const hour = new Date().getHours();
-      const welcomeTypes = ["Good morning", "Good afternoon", "Good evening"];
-      let welcomeText = "";
-
-      if (hour < 12) welcomeText = welcomeTypes[0];
-      else if (hour < 18) welcomeText = welcomeTypes[1];
-      else welcomeText = welcomeTypes[2];
-
-      let url="http://localhost:3000/test";
-      fetch(url).then(response => response.json())
-              .then( (result) => {
-                let div=document.getElementById('test');
-                if(result.name!=="") {
-                  div.innerHTML = `${welcomeText}: ${result.name}`;
-                }
-              })
-    </script>
     <div class="socialNetwork">
       <a href="http://facebook.com"  target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
       <a href="http://twitter.com"  target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
@@ -56,14 +38,16 @@
 </nav>
 <section id="Sign">
   <div class="container page-container">
-    <form action="http://localhost:3000/login" method="post" class="mainForm">
+    <form action="http://localhost:3001/login" method="post" class="mainForm">
       <h1>Login To Foody</h1><br>
+      <article class="form">
       <input type="text" name="username" placeholder="User Name"><br><br>
       <input type="password" name="password" placeholder="Password"><br><br>
+      </article>
       <button type="submit" class="submit">Login</button>
       <div id="logerr"></div>
       <script type="text/javascript">
-        let logerr="http://localhost:3000/loginError";
+        let logerr="http://localhost:3001/loginError";
           fetch(logerr).then(response => response.json())
                   .then( (result) => {
                     console.log(result.error);

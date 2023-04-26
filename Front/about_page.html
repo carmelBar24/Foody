@@ -20,24 +20,6 @@
             <img src="../photos/mainPhoto.png" alt="בלוג אוכל" class="logo">
             <h3 id=test></h3>
         </div>
-        <script type="text/javascript">
-            const hour = new Date().getHours();
-            const welcomeTypes = ["Good morning", "Good afternoon", "Good evening"];
-            let welcomeText = "";
-
-            if (hour < 12) welcomeText = welcomeTypes[0];
-            else if (hour < 18) welcomeText = welcomeTypes[1];
-            else welcomeText = welcomeTypes[2];
-
-            let url="http://localhost:3000/test";
-            fetch(url).then(response => response.json())
-                .then( (result) => {
-                    let div=document.getElementById('test');
-                    if(result.name!=="") {
-                        div.innerHTML = `${welcomeText}: ${result.name}`;
-                    }
-                })
-        </script>
         <div class="socialNetwork">
             <a href="http://facebook.com"  target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
             <a href="http://twitter.com"  target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
@@ -57,10 +39,18 @@
 <section id="about">
     <div class="container page-container about-container">
     <article class="recipe">
+        <div class="grid-about">
+            <div>
         <h1>About Foody and Our writer</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aspernatur voluptatibus, dolor eligendi consequatur laudantium unde sit aliquam ipsa! Delectus velit aliquam ab et, consequatur officiis ullam facilis ut natus corporis, eligendi earum officia minus repudiandae adipisci eum facere quas quae mollitia tenetur aspernatur dignissimos itaque beatae iste. Aliquid, eius.</p>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque quis obcaecati optio et itaque nostrum aperiam assumenda ullam, sapiente totam! Aut tempore temporibus, vitae incidunt, ab aliquam in labore perferendis nobis voluptatibus aperiam repellendus quaerat minima eius optio repudiandae assumenda possimus distinctio, ipsa dicta sit! Ullam tenetur est quidem nesciunt modi quaerat vitae ipsum. Laborum corrupti debitis suscipit dolorem, alias vitae, nostrum consequatur error aliquam hic eius id deserunt repellat ad odio ipsum ut cumque consequuntur. Nostrum exercitationem numquam repellat ea modi esse tempore ipsum maxime earum fugit facilis, provident, quod nam odit. Sit nam tenetur nostrum atque dicta impedit?</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda autem beatae blanditiis debitis ea in Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium dicta distinctio dolor earum eius error exercitationem facere id, illo ipsam  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cumque dolorem enim, eum exercitationem expedita libero nam, neque nostrum porro quam quasi quo sit, suscipit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at autem cupiditate dolor ea eligendi esse facilis, ipsam itaque molestiae non obcaecati officiis quaerat, quod recusandae saepe velit veritatis, vero. ullam veniam voluptate? Labore, omnis? laboriosam neque officiis placeat quod repellendus ullam voluptates voluptatum. laboriosam nobis, optio quae quasi quibusdam quidem quos ratione repellat suscipit veniam veritatis vero.</p>
+            </div>
+        <div class="about-lottie">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_Q895iE.json"  background="transparent"  speed="1"  style="width: 500px; height: 500px;"  loop  autoplay></lottie-player>
+        </div>
+        </div>
     </article>
         <aside class="recipe">
             <h2>Join Our Friends Club</h2>

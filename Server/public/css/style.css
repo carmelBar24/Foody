@@ -9,9 +9,9 @@ body{
     font-family:'Bad Script', cursive;
 }
 .logo{
-    height: 60%;
+    height: 20%;
     width: 20%;
-    margin-left: 30px;
+    /*margin-left: 30px;*/
 }
 .fa-2x{
     color:#5984DE;
@@ -44,7 +44,7 @@ h1,h2,h3 {
     line-height: 1.3;
 }
 a{
-    color: rosybrown;
+    color:#3b5998;
     text-decoration:none;
 }
 ul{
@@ -90,7 +90,7 @@ li{
     grid-template-columns: 5fr 2fr 3fr;
     margin-top:0px;
     align-items: center;
-    background-color:floralwhite;
+    background-color:#fffcf6;
     height: 20vh;
 }
 #main-nav .container ul{
@@ -205,7 +205,7 @@ li{
     grid-column:2/span 2;
 }
 .recipe{
-    background:#FDFAF3;
+    background:#fffcf6;
     padding: 16px;
     border-radius: 10px;
 }
@@ -214,7 +214,8 @@ li{
     height: 250px;
 }
 
-.recipe img{
+.recipe-img{
+    padding: 80px;
     width: 100%;
     height: auto;
 }
@@ -230,29 +231,29 @@ li{
     grid-template-area: "a b c d e";
 }
 #footer input{
-    color:#ff7f50;
+    color:blue;
     margin:10px;
 }
 #footer img{
     width: 150px;
+    height: 150px;
 }
 #footer li{
     margin:auto;
     padding: 15px;
-    border-bottom: 2px #ff7f50 ;
+    border-bottom: 2px blue ;
     border-bottom-style:dotted;
 }
 #footer li:hover{
-    color: #ff7f50;
+    color: blue;
 }
 #footer a{
-    color:#ff7f50;
+    color:blue;
     background-color:#ffffff;
     padding-top: 15px;
 }
 #footer a:hover{
-    color:#fff5ee;
-    background-color:#ff7f50
+    background-color:#E2F3FF
 }
 #footer .footer-container div{
     margin-top: 10px;
@@ -271,13 +272,17 @@ li{
 .page-container>*:first-child{
     grid-row:1/span 3;
 }
+.grid-about{
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+}
 #about .page-container .recipe .button{
-    background-color:#ff7f50 ;
-    color: seashell;
+    background-color:#E2F3FF ;
+    color:blue;
     padding-top: 15px;
 }
 #about .page-container .recipe .button:hover{
-    color:#ff7f50;
+    color:blue;
     background-color:#ffffff;
 }
 #about .page-container .recipe h1{
@@ -296,21 +301,26 @@ li{
 }
 #recipes .recipe li:hover
 {
-    color:#ff7f50;
+    color:#E2F3FF;
     font-weight: bold;
 }
 #recipes .recipe li i{
     margin-right: 20px;
-    color:#ff7f50 ;
+    color:blue;
 }
+.recipe-text img{
+   height: 50vh;
+    width: 50vh;
+}
+
 #recipes .page-container .recipe .button
 {
-    background-color:#ff7f50 ;
-    color: seashell;
+    background-color:#E2F3FF;
+    color: blue;
     padding-top: 15px;
 }
 #recipes .page-container .recipe .button:hover{
-     color:#ff7f50;
+     color:blue;
      background-color:#ffffff;
  }
 #recipes .page-container .recipe .meta
@@ -319,8 +329,13 @@ li{
     justify-content: space-between;
     align-items: center;
     background-color:#ffffff;
-    font-size:smaller;
+    font-size:larger;
     padding-top: 5px;
+}
+.video-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 #recipes .page-category video{
     width: 350px;
@@ -335,7 +350,7 @@ li{
 .recipeVideo{
     height: 380px;
     border-radius:50%;
-    padding-left: 38px;
+
 }
 
 #search{
@@ -389,41 +404,44 @@ li{
     color:red;
 }
 .mainForm{
-    background-color: #fff5ee;
-    height: 100%;
+    background-color: #fffcf6;
+    height: 70vh;
     padding: 25px;
     text-align: center;
     line-height: normal;
+    width: 50vw;
+    box-shadow: 10px 10px 8px 10px #888888;
+    padding-top: 100px;
+
 }
+
 #Sign{
     padding-left: 370px;
     height: 80vh;
 }
-.mainForm{
-    border-radius: 10%;
-}
+
 .mainForm input{
     border: 1px solid #ccc;
     border-radius: 0px;
     margin-bottom: 10px;
-    width: 100%;
+    width: 50%;
     box-sizing: border-box;
     color: #2C3E50;
     font-size: 13px;
     height: 35px;
-
 }
 .mainForm .submit{
     font-size: large;
     width: 100px;
-    background: #ff7f50;
+    background:#E2F3FF;
     font-weight: bold;
-    color: white;
+    color: blue;
     border: 0 none;
     border-radius: 25px;
     cursor: pointer;
     padding: 10px 5px;
     margin: 10px 5px;
+    margin-top: 50px;
 }
 
 .error{
@@ -433,10 +451,14 @@ li{
 .error h1{
     font-size: x-large;
 }
-
+.Error-lottie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
  .err{
-     background-color: coral;
-     color: white;
+     background-color:#E2F3FF;
+     color:blue;
      padding: 20px;
  }
  #test{

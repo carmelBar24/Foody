@@ -20,24 +20,6 @@
             <img src="../photos/mainPhoto.png" alt="בלוג אוכל" class="logo">
             <h3 id=test></h3>
         </div>
-        <script type="text/javascript">
-            const hour = new Date().getHours();
-            const welcomeTypes = ["Good morning", "Good afternoon", "Good evening"];
-            let welcomeText = "";
-
-            if (hour < 12) welcomeText = welcomeTypes[0];
-            else if (hour < 18) welcomeText = welcomeTypes[1];
-            else welcomeText = welcomeTypes[2];
-
-            let url="http://localhost:3000/test";
-            fetch(url).then(response => response.json())
-                .then( (result) => {
-                    let div=document.getElementById('test');
-                    if(result.name!=="") {
-                        div.innerHTML = `${welcomeText}: ${result.name}`;
-                    }
-                })
-        </script>
         <div class="socialNetwork">
             <a href="http://facebook.com"  target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
             <a href="http://twitter.com"  target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
@@ -57,15 +39,17 @@
 <section id="recipes" >
     <div  id=recipeArticle class="container page-container recipe-container">
         <article class="recipe" id="recipe-text">
-            <img src="../photos/recipe1.jpg">
+            <img class="recipe-img" src="../photos/recipe1.jpg">
             <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, quam.</h1>
             <div class="meta">
                 <h3> <i class="fa fa-male" aria-hidden="true"></i> Written By Carmel Bar ,January 24,2022.</h3>
                 <div class="category category-morning">Morning</div>
             </div>
+            <div>
             <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda culpa debitis eius est et eveniet facere fugiat id illum ipsum iusto laborum nostrum odio, odit praesentium recusandae sint tempora. Blanditiis dolore doloremque illo necessitatibus qui rem unde voluptate voluptatum!</p>
             <p id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse iure laboriosam quod sequi. Aperiam aspernatur consequatur iusto molestiae placeat similique totam? Ea iusto, modi neque officia praesentium ratione soluta vitae.</p>
             <p id="p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam asperiores aut beatae blanditiis delectus dignissimos eligendi, illo ipsum itaque molestiae nemo obcaecati, qui recusandae rem similique sit voluptates? Consequuntur dicta dolore est explicabo harum, iure magni modi necessitatibus officiis provident quia quidem ratione repudiandae sequi sunt tenetur totam ullam veritatis? Incidunt, modi, ullam! In iste perspiciatis quo voluptatum. Explicabo.</p>
+            </div>
         </article>
         <aside class="recipe page">
             <h3>Categories</h3>

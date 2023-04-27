@@ -19,8 +19,11 @@
   
 ## Pages 😍
 <p align="center">
-<img src="AppScreensAndPoster/home.png" height="400"/><img src="AppScreensAndPoster/login.png" height="400" hspace="20"/><img src="AppScreensAndPoster/register.png" height="400" /><br><br>
-<img src="AppScreensAndPoster/workbench.png" height="400"/><img src="AppScreensAndPoster/autumata.png" height="400"hspace="20"/><img src="AppScreensAndPoster/tasks.png" height="400" />
+<img src="AppScreensAndPoster/showcase.png" height="400"/><img src="AppScreensAndPoster/login.png" height="400" hspace="20"/><img src="AppScreensAndPoster/editor.png" height="400" /><br><br>
+<img src="AppScreensAndPoster/search.png" height="400"/><img src="AppScreensAndPoster/lunch.png" height="400"hspace="20"/>
+  <img src="AppScreensAndPoster/recipes.png" height="400"hspace="20"/>
+  <img src="AppScreensAndPoster/about.png" height="400"hspace="20"/>
+  <img src="AppScreensAndPoster/error.png" height="400"hspace="20"/><img src="AppScreensAndPoster/footer.png" height="400" />
 </p>
 
 ## In Action 👀

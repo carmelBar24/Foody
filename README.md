@@ -19,16 +19,33 @@
   
 ## Pages 😍
 <p align="center">
-<img src="AppScreensAndPoster/showcase.png" height="400"/><img src="AppScreensAndPoster/login.png" height="400" hspace="20"/><img src="AppScreensAndPoster/editor.png" height="400" /><br><br>
-<img src="AppScreensAndPoster/search.png" height="400"/><img src="AppScreensAndPoster/lunch.png" height="400"hspace="20"/>
-  <img src="AppScreensAndPoster/recipes.png" height="400"hspace="20"/>
-  <img src="AppScreensAndPoster/about.png" height="400"hspace="20"/>
-  <img src="AppScreensAndPoster/error.png" height="400"hspace="20"/><img src="AppScreensAndPoster/footer.png" height="400" />
+<img src="AppScreensAndPoster/showcase.png" height="400" style="display: block; margin: 0 auto; text-align: center;"/>
+<hr class="dotted" style="border-top: 3px dotted #bbb;">
+<img src="AppScreensAndPoster/login.png" height="400" style="display: block; margin: 0 auto; text-align: center;" hspace="20"/>
+<hr class="dotted" style="border-top: 3px dotted #bbb;">
+<img src="AppScreensAndPoster/editor.png" height="400" style="display: block; margin: 0 auto; text-align: center;" hspace="20"/>
+<hr class="dotted" style="border-top: 3px dotted #bbb;">
+<img src="AppScreensAndPoster/search.png" height="400" style="display: block; margin: 0 auto; text-align: center;" hspace="20"/>
+  <hr class="dotted" style="border-top: 3px dotted #bbb;">
+  <img src="AppScreensAndPoster/lunch.png" height="400" style="display: block; margin: 0 auto; text-align: center;"hspace="20"/>
+  <hr class="dotted" style="border-top: 3px dotted #bbb;">
+  <img src="AppScreensAndPoster/recipes.png" height="400" style="display: block; margin: 0 auto; text-align: center;" hspace="20"/>
+  <hr class="dotted" style="border-top: 3px dotted #bbb;">
+  <img src="AppScreensAndPoster/about.png" height="400" style="display: block; margin: 0 auto; text-align: center;" hspace="20"/>
+  <hr class="dotted" style="border-top: 3px dotted #bbb;">
+  <img src="AppScreensAndPoster/error.png" height="400" style="display: block; margin: 0 auto; text-align: center;" hspace="20"/>
+  <hr class="dotted" style="border-top: 3px dotted #bbb;">
+  <img src="AppScreensAndPoster/footer.png" height="400" style="display: block; margin: 0 auto; text-align: center;"hspace="20" />
 </p>
 
 ## In Action 👀
 <p align="center">
   <a href="https://github.com/carmelBar24/brain">
-    <img src="AppScreensAndPoster/brain_app_video.gif" alt="Logo" height="540"> 
+    <div style="position:relative;width:fit-content;height:fit-content;">
+            <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/scT2Fu8wYns?utm_source=embed&utm_medium=embed&utm_campaign=watch">
+                <img style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
+            </a>
+            <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/scT2Fu8wYns/embed" width="640" height="360"></iframe>
+        </div>
   </a>
 </p>

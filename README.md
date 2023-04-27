@@ -41,6 +41,6 @@
 ## In Action 👀
 <p align="center">
   <a href="https://github.com/carmelBar24/brain">
-     <img src="AppScreensAndPoster/video.gif" alt="Logo" height="540"> 
+     <img src="AppScreensAndPoster/video.gif" alt="Logo" height="52"> 
   </a>
 </p>

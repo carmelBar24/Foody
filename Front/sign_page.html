@@ -41,11 +41,24 @@
     <div class="container page-container">
         <form action="http://localhost:3000/signup" method="post" class="mainForm">
             <h1>Sign Up To Foody</h1><br>
-            <input type="text" name="fullname" placeholder="Full Name"><br><br>
-            <input type="text" name="username" placeholder="User Name"><br><br>
-            <input type="text" name="email" placeholder="Email"><br><br>
-            <input type="password" name="password" placeholder="Password"><br><br>
-            <input type="password" name="passwordConfirm" placeholder="Confirm Password"><br><br>
+            <div class="card_header">
+                <div class="field">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" placeholder="User Name" id="username">
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" placeholder="Email" id="email">
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password" id="password">
+                </div>
+                <div class="field">
+                    <label for="confirm-password"> Confirm Password</label>
+                    <input type="password" name="passwordConfirm" placeholder="Confirm Password" id="confirm-password">
+                </div>
+             </div>
             <button type="submit" class="submit">Sign Up</button>
         </form>
     </div>

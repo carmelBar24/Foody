@@ -41,8 +41,16 @@
     <form action="http://localhost:3001/login" method="post" class="mainForm">
       <h1>Login To Foody</h1><br>
       <article class="form">
-      <input type="text" name="username" placeholder="User Name"><br><br>
-      <input type="password" name="password" placeholder="Password"><br><br>
+        <div class="card_header">
+          <div class="field">
+            <label for="username">Username</label>
+            <input type="text" name="username" placeholder="User Name" id="username">
+          </div>
+          <div class="field">
+            <label for="username">Password</label>
+      <input type="password" name="password" placeholder="Password" id="password">
+          </div>
+        </div>
       </article>
       <button type="submit" class="submit">Login</button>
       <div id="logerr"></div>

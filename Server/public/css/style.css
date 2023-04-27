@@ -11,7 +11,6 @@ body{
 .logo{
     height: 20%;
     width: 20%;
-    /*margin-left: 30px;*/
 }
 .fa-2x{
     color:#5984DE;
@@ -30,9 +29,9 @@ body{
 }
 
 img{
-    width: 100%;
+    width: 80%;
     margin-bottom:0.5rem;
-    height: 30%;
+    height: 50%;
     border-radius: 15px;
 }
 p{
@@ -52,6 +51,17 @@ ul{
 }
 li{
     padding-right: 50px;
+}
+.field{
+    padding-bottom: 20px;
+}
+label {
+    color: black;
+    font-size: 14px;
+    display: block;
+    padding-bottom: 10px;
+    text-align: left;
+    margin-left: 25%;
 }
 /*about&recipes*/
 .page-container {
@@ -149,6 +159,7 @@ li{
     line-height: normal;
     color: #3b5998;
     margin: 50px;
+    font-size: small;
 }
 #showCase .container .showCase-content a{
     background-color:#5984DE;
@@ -159,9 +170,10 @@ li{
   padding: 100px;
 }
 #showCase .container .showCase-logo img{
-    height: 300px;
-    width: 500px;
+    height: 25vh;
+    width: 300px;
     margin-left: 50px;
+    margin-bottom: 10px;
     box-shadow:  0 4px 8px 5px white;
 }
 
@@ -405,30 +417,29 @@ li{
 }
 .mainForm{
     background-color: #fffcf6;
-    height: 70vh;
-    padding: 25px;
+    padding: 30px;
     text-align: center;
     line-height: normal;
-    width: 50vw;
     box-shadow: 10px 10px 8px 10px #888888;
-    padding-top: 100px;
-
-}
-
-#Sign{
-    padding-left: 370px;
-    height: 80vh;
-}
-
-.mainForm input{
-    border: 1px solid #ccc;
-    border-radius: 0px;
-    margin-bottom: 10px;
+    margin-left:27vw;
     width: 50%;
-    box-sizing: border-box;
-    color: #2C3E50;
-    font-size: 13px;
-    height: 35px;
+}
+
+
+input{
+    border-radius: 5px;
+    background-color: #E2F3FF;
+    padding: 7px;
+    width:50%;
+    color:black;
+    border: 1px solid white;
+}
+.card_header {
+    display: grid;
+    align-items: start;
+    margin: auto;
+    grid-template-rows: auto auto auto auto;
+
 }
 .mainForm .submit{
     font-size: large;

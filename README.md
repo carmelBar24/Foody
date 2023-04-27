@@ -21,9 +21,9 @@
 <p align="center">
 <img src="AppScreensAndPoster/showcase.png" height="400" style="display: block; margin: 0 auto; text-align: center;"/>
 <hr class="dotted" style="border-top: 3px dotted #bbb;">
-<img src="AppScreensAndPoster/login.png" height="400" style="display: block; margin: 0 auto; text-align: center;" hspace="20"/>
+<img src="AppScreensAndPoster/login.png" height="400" style="display: block; margin: 0 auto; text-align: center;" hspace="50"/>
 <hr class="dotted" style="border-top: 3px dotted #bbb;">
-<img src="AppScreensAndPoster/editor.png" height="400" style="display: block; margin: 0 auto; text-align: center;" width="500"/>
+<img src="AppScreensAndPoster/editor.png" height="400" style="display: block; margin: 0 auto; text-align: center;"/>
 <hr class="dotted" style="border-top: 3px dotted #bbb;">
 <img src="AppScreensAndPoster/search.png" height="400" style="display: block; margin: 0 auto; text-align: center;" hspace="20"/>
   <hr class="dotted" style="border-top: 3px dotted #bbb;">

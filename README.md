@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/carmelBar24/brain">
+  <a href="https://github.com/carmelBar24/Foody">
     <img src="AppScreensAndPoster/logo.png" alt="Logo"> 
 <p align ="center"> 
 <i>A Responsive Food Blog Website using <a href="https://nodejs.org/en">Node js💕</a> & <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"> JS🔥</a>&<a href="https://www.mysql.com/">My SQL🐬</a> </i>

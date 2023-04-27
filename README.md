@@ -19,23 +19,23 @@
   
 ## Pages 😍
 <p align="center">
-<img src="AppScreensAndPoster/showcase.png" height="400"/>
+<img src="AppScreensAndPoster/showcase.png" height="400" style="display: block; margin: 0 auto; text-align: center;"/>
 <hr class="dotted" style="border-top: 3px dotted #bbb;">
-<img src="AppScreensAndPoster/login.png" height="400" hspace="20"/>
-<hr class="dotted" style= border-top: 25px dotted #bbb>
-<img src="AppScreensAndPoster/editor.png" height="400" width="500"/>
-<hr class="dotted" style= border-top: 25px dotted #bbb>
-<img src="AppScreensAndPoster/search.png" height="400" hspace="20"/>
-  <hr class="dotted" style= border-top: 25px dotted #bbb>
-  <img src="AppScreensAndPoster/lunch.png" height="400"hspace="20"/>
-  <hr class="dotted" style= border-top: 25px dotted #bbb>
-  <img src="AppScreensAndPoster/recipes.png" height="400"  hspace="20"/>
-  <hr class="dotted" style= border-top: 25px dotted #bbb>
-  <img src="AppScreensAndPoster/about.png" height="400" hspace="20"/>
-  <hr class="dotted" style= border-top: 25px dotted #bbb>
-  <img src="AppScreensAndPoster/error.png" height="400" hspace="20"/>
-  <hr class="dotted" style= border-top: 25px dotted #bbb>
-  <img src="AppScreensAndPoster/footer.png" height="400"hspace="20" />
+<img src="AppScreensAndPoster/login.png" height="400" style="display: block; margin: 0 auto; text-align: center;" hspace="20"/>
+<hr class="dotted" style="border-top: 3px dotted #bbb;">
+<img src="AppScreensAndPoster/editor.png" height="400" style="display: block; margin: 0 auto; text-align: center;" width="500"/>
+<hr class="dotted" style="border-top: 3px dotted #bbb;">
+<img src="AppScreensAndPoster/search.png" height="400" style="display: block; margin: 0 auto; text-align: center;" hspace="20"/>
+  <hr class="dotted" style="border-top: 3px dotted #bbb;">
+  <img src="AppScreensAndPoster/lunch.png" height="400" style="display: block; margin: 0 auto; text-align: center;"hspace="20"/>
+  <hr class="dotted" style="border-top: 3px dotted #bbb;">
+  <img src="AppScreensAndPoster/recipes.png" height="400" style="display: block; margin: 0 auto; text-align: center;" hspace="20"/>
+  <hr class="dotted" style="border-top: 3px dotted #bbb;">
+  <img src="AppScreensAndPoster/about.png" height="400" style="display: block; margin: 0 auto; text-align: center;" hspace="20"/>
+  <hr class="dotted" style="border-top: 3px dotted #bbb;">
+  <img src="AppScreensAndPoster/error.png" height="400" style="display: block; margin: 0 auto; text-align: center;" hspace="20"/>
+  <hr class="dotted" style="border-top: 3px dotted #bbb;">
+  <img src="AppScreensAndPoster/footer.png" height="400" style="display: block; margin: 0 auto; text-align: center;"hspace="20" />
 </p>
 
 ## In Action 👀

@@ -20,7 +20,7 @@
 ## Pages 😍
 <p align="center">
 <img src="AppScreensAndPoster/showcase.png" height="400"/>
-<hr class="dotted" style= border-top: 25px dotted #bbb>
+<hr class="dotted" style="border-top: 3px dotted #bbb;">
 <img src="AppScreensAndPoster/login.png" height="400" hspace="20"/>
 <hr class="dotted" style= border-top: 25px dotted #bbb>
 <img src="AppScreensAndPoster/editor.png" height="400" width="500"/>

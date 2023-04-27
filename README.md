@@ -2,7 +2,7 @@
   <a href="https://github.com/carmelBar24/brain">
     <img src="AppScreensAndPoster/logo.png" alt="Logo"> 
 <p align ="center"> 
-<i>A Study App using <a href="https://flutter.dev/">Flutter 💕</a> & <a href="https://firebase.google.com/">Firebase 🔥</a>  </i>
+<i>A Responsive Food Blog Website using <a href="https://nodejs.org/en">Node js💕</a> & <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"> JS🔥</a> & </a> & <a href="https://www.mysql.com/">My SQL🐬</a> </i>
 <br><br>
   
 ## About the App 🌶️
@@ -13,7 +13,7 @@
   
   - As a registered user you can see additional information that is not visible to guests😎.
   
-  - All the data is stored in MySQL 🔥. Because of real-time database you'll get the latest summaries 🧠.
+  - All the data is stored in MySQL 🔥. Because of real-time database you'll get the latest summaries.
   
   - Future development: Sign in from Google/Facebook 🤗.
   

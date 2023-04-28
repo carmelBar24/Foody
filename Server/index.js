@@ -3,15 +3,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const port = 3001
-
-//TODO:move to other file
-let mysql = require('mysql');
-let connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '4364',
-    database: 'foodblog'
-});
+var database = require('./database.js');
 
 const path=require('path');
 
@@ -68,81 +60,45 @@ paths.forEach(function (current) {
     });
 })
 
-//TODO:check routs
 
 //Route that handles login logic
-app.post('/login', (req, res) =>{
-    connection.connect(function(err) {
-        if (err) {
-            return console.error('error: ' + err.message);
-        }
-        console.log('Connected to the MySQL server.');
-    });
-    const userName=req.body.username;
-    const password=req.body.password;
-    const sqlSearch = "SELECT * FROM users WHERE userName = ? and password = ?"
-    const search_query = connection.format(sqlSearch,[userName,password]);
-    connection.query (search_query, async (err, result) => {
-        if (err) throw err
-        else {
-            console.log("------> Search Results")
-            console.log(result.length)
-            if (result.length != 0) {
-                console.log("------> User exists")
-                let reqPath = path.join(__dirname, '../')
-                reqPath = path.join(reqPath, "Front/home_page.html")
-                user = userName;
-                res.sendFile(reqPath);
-            }
-            else {
-                logErr="Wrong password/user! try again";
-                res.redirect("back");
-            }
-        }
-    });
-    connection.end(function(err) {
-        if (err) {
-            return console.log('error:' + err.message);
-        }
-        console.log('Close the database connection.');
-    })
+app.post('/login', async (req, res) => {
+    let userNotExist=0;
+    userNotExist= await database.checkUserInDataBase(req.body.username,req.body.password);
+    if(userNotExist===1)
+    {
+        logErr="User Name/Password wrong!";
+        console.log("not good");
+        res.redirect("back");
+        //res.redirect('back');
+    }
+    else{
+        console.log("------> User exists")
+        let reqPath = path.join(__dirname, '../')
+        reqPath = path.join(reqPath, "Front/home_page.html")
+        user = req.body.username;
+        res.sendFile(reqPath);
+    }
 })
 
 //Route that handles signup logic
-app.post('/signup', (req, res) =>{
-    connection.connect(function(err) {
-        if (err) {
-            return console.error('error: ' + err.message);
-        }
-        console.log('Connected to the MySQL server.');
-    });
-    const userName=req.body.username;
-    const fullName=req.body.fullname;
-    const password=req.body.password;
-    const email=req.body.email;
-    const sqlInsert = "INSERT INTO users VALUES (?,?,?,?)";
-    const insert_query = connection.format(sqlInsert,[password,userName,fullName,email]);
-    connection.query (insert_query, (err, result)=> {
-        if (err) throw (err)
+app.post('/signup', async (req, res) =>{
+    let UserDuplicate = 0;
+    UserDuplicate = await database.insertUserToDataBase(req.body.username,req.body.email, req.body['user_mail'], req.body.password);
+    console.log(UserDuplicate);
+    if (UserDuplicate === 1) {
+      /*  message = "User Name already exist!";*/
+        console.log("error");
+        res.redirect("back");
+        } else {
         console.log ("--------> Created new User")
         res.sendStatus(201)
-    });
-    let reqPath = path.join(__dirname, '../')
-    reqPath=path.join(reqPath,"Front/login_page.html")
-    res.sendFile(reqPath);
-
-    connection.end(function(err) {
-        if (err) {
-            return console.log('error:' + err.message);
+        let reqPath = path.join(__dirname, '../')
+        reqPath=path.join(reqPath,"Front/login_page.html")
+        res.sendFile(reqPath);
         }
-        console.log('Close the database connection.');
-    });
 })
 
-//Route that return userName to display
-app.get('/test',(req,res)=>{
-    res.json({name:user});
-})
 app.get('/loginError',(req,res)=>{
     console.log("hello");
     res.json({error:logErr});

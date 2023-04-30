@@ -53,15 +53,14 @@
         </div>
       </article>
       <button type="submit" class="submit">Login</button>
-      <div id="logerr"></div>
+      <div id="err"></div>
       <script type="text/javascript">
-        let logerr="http://localhost:3001/loginError";
-          fetch(logerr).then(response => response.json())
-                  .then( (result) => {
+        let logerr="http://localhost:3001/Error";
+          fetch(logerr).then(response =>response.json())
+                  .then((result) => {
                     console.log(result.error);
-                    let div=document.querySelector('#logerr');
+                    let div=document.querySelector('#err');
                     if(result.error!=="") {
-                      console.log("hello");
                       div.innerHTML = ` ${result.error}`;
                       setTimeout(function () {
                         div.innerHTML="";

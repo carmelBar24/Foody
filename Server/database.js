@@ -39,7 +39,6 @@ async function insertUserToDataBase(user_name, user_email, user_password) {
                 else
                     {
                         if (result.length != 0) {
-                            console.log("user name is already in use");
                             userNameDuplicate = 1;
                             resolve(true);
                         } else {

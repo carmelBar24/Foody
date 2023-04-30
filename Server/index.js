@@ -14,7 +14,7 @@ const paths=[
 
 //TODO:check this
 var user="";
-var logErr="";
+let errMessage="";
 const bcrypt = require('bcrypt');
 
 
@@ -42,7 +42,6 @@ paths.forEach(function (current) {
         reqPath = path.join(reqPath,"Front");
         if(current==="/recipes_page.html"||current==="/search_page.html")
         {
-            //TODO:change to email
             if(user==="")
             {
                 reqPath=path.join(reqPath,"/error.html");
@@ -60,6 +59,26 @@ paths.forEach(function (current) {
     });
 })
 
+function validate(username,email,password,passwordConfirm) {
+    let regularExpressionPass = /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+    let regularExpressionEmail = /\S+@\S+\.\S+/;
+    let regularExpressionName=/^[a-zA-Z0-9_\.]+$/;
+    let isPasswordMatch = password === passwordConfirm;
+    let isEmailValid = regularExpressionEmail.test(email);
+    let isPasswordValid = regularExpressionPass.test(password);
+    let isUsernameValid = regularExpressionName.test(username);
+    if (!isEmailValid) {
+        return "The email address you entered is invalid. Please enter a valid email address and try again.";
+    } else if (!isPasswordValid) {
+        return "The password you entered does not meet our security requirements. Please choose a Stronger password";
+    } else if (!isUsernameValid) {
+        return "The username you entered is invalid. Please choose a different username that contains only alphanumeric characters, underscores, and periods and try again.";
+    } else if (!isPasswordMatch) {
+        return "Passwords does not match. Please enter the same password in both fields.";
+    } else {
+        return "success";
+    }
+}
 
 //Route that handles login logic
 app.post('/login', async (req, res) => {
@@ -67,41 +86,50 @@ app.post('/login', async (req, res) => {
     userNotExist= await database.checkUserInDataBase(req.body.username,req.body.password);
     if(userNotExist===1)
     {
-        logErr="User Name/Password wrong!";
-        console.log("not good");
+        errMessage="User Name/Password wrong!";
         res.redirect("back");
-        //res.redirect('back');
     }
     else{
         console.log("------> User exists")
-        let reqPath = path.join(__dirname, '../')
-        reqPath = path.join(reqPath, "Front/home_page.html")
         user = req.body.username;
-        res.sendFile(reqPath);
+        res.redirect("/");
     }
 })
 
 //Route that handles signup logic
-app.post('/signup', async (req, res) =>{
+app.post('/signup', async (req, res) => {
     let UserDuplicate = 0;
-    UserDuplicate = await database.insertUserToDataBase(req.body.username,req.body.email, req.body['user_mail'], req.body.password);
-    console.log(UserDuplicate);
-    if (UserDuplicate === 1) {
-      /*  message = "User Name already exist!";*/
-        console.log("error");
-        res.redirect("back");
-        } else {
-        console.log ("--------> Created new User")
-        res.sendStatus(201)
-        let reqPath = path.join(__dirname, '../')
-        reqPath=path.join(reqPath,"Front/login_page.html")
-        res.sendFile(reqPath);
+    let validPromise=new Promise((resolve, reject) => {
+        let result=validate(req.body.username,req.body.email,req.body.password,req.body.passwordConfirm);
+        if(result=="success")
+        {
+            resolve(true);
         }
+        else{
+            errMessage=result;
+            resolve(false);
+        }
+    });
+    let resultOfValidation = await validPromise;
+    if (resultOfValidation==true)
+    {
+        UserDuplicate = await database.insertUserToDataBase(req.body.username, req.body.email, req.body.password);
+        console.log(UserDuplicate);
+        if (UserDuplicate === 1) {
+            errMessage= "User Name already exist!";
+            res.redirect("back");
+        } else {
+            console.log("--------> Created new User")
+            res.redirect("/");
+        }
+    }
+    else{
+        res.redirect("back");
+    }
 })
 
-app.get('/loginError',(req,res)=>{
-    console.log("hello");
-    res.json({error:logErr});
+app.get('/Error',(req,res)=>{
+    res.json({error:errMessage});
 })
 
 

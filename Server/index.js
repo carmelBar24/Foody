@@ -8,16 +8,15 @@ var database = require('./database.js');
 const path=require('path');
 
 
+app.set('view engine', 'ejs');
+
+
 const paths=[
     "/home_page.html","/about_page.html","/recipes_page.html","/dessert.html","/login_page.html","/lunch.html","/morning.html",
-    ,"/recipes2.html","/recipes3.html","/recipes4.html","/recipes5.html","/recipes6.html","/recipes7.html",
-    ,"/recipes2.html","/recipes3.html","/recipes4.html","/recipes5.html","/recipes6.html","/recipes7.html",
     "/search_page.html","/sign_page.html","/error.html"];
 
-//TODO:check this
 var user="";
 let errMessage="";
-const bcrypt = require('bcrypt');
 
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
@@ -38,13 +37,11 @@ app.get('/', (req, res)=>{
     res.sendFile(reqPath);
 });
 
-app.get('/recipes1.html', (req, res) => {
+app.get('/recipes', (req, res) => {
     const image = req.query.image;
-    let reqPath = path.join(__dirname, '../')
-    reqPath = path.join(reqPath,"Front");
-    reqPath=path.join(reqPath,"/recipes1.html");
-    console.log('../photos/'+image);
-    res.sendFile(reqPath,{ image:"../photos/"+image});
+    const category=req.query.category;
+    const title=req.query.title;
+    res.render('recipes', { image: '../photos/' + image ,category:category,title:title});
 });
 
 paths.forEach(function (current) {

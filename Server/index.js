@@ -4,12 +4,17 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const port = 3001
 var database = require('./database.js');
-
+const ejs = require('ejs');
 const path=require('path');
+const html = require('html');
+
+app.set('view engine', ejs);
+app.set('views', path.join(__dirname, 'views'));
 
 const paths=[
     "/home_page.html","/about_page.html","/recipes_page.html","/dessert.html","/login_page.html","/lunch.html","/morning.html",
-    "/recipes1.html","/recipes2.html","/recipes3.html","/recipes4.html","/recipes5.html","/recipes6.html","/recipes7.html",
+    ,"/recipes2.html","/recipes3.html","/recipes4.html","/recipes5.html","/recipes6.html","/recipes7.html",
+    ,"/recipes2.html","/recipes3.html","/recipes4.html","/recipes5.html","/recipes6.html","/recipes7.html",
     "/search_page.html","/sign_page.html","/error.html"];
 
 //TODO:check this
@@ -34,6 +39,12 @@ app.get('/', (req, res)=>{
     let reqPath = path.join(__dirname, '../')
     reqPath=path.join(reqPath,"Front/home_page.html")
     res.sendFile(reqPath);
+});
+
+app.get('/recipes1.html', (req, res) => {
+    const image = req.query.image;
+    console.log(image);
+    res.render('Front/recipes1.html', { image:image });
 });
 
 paths.forEach(function (current) {

@@ -28,7 +28,7 @@ app.use(cors())
 app.use("/css",  express.static(__dirname + '/public/css'));
 app.use("/js",  express.static(__dirname + '/public/js'));
 app.use("/photos",  express.static(__dirname + '/public/photos'));
-app.use("/css",  express.static(__dirname + '/public/mobile'));
+app.use("/mobile",  express.static(__dirname + '/public/mobile'));
 
 //home_page
 app.get('/', (req, res)=>{

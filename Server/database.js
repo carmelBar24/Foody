@@ -1,5 +1,6 @@
-const mysql = require('./node_modules/mysql2');
+
 const path = require("path");
+const mysql = require(path.join(__dirname, 'node_modules', 'mysql2'));
 const constants = require("constants");
 const { resolve } = require('path');
 

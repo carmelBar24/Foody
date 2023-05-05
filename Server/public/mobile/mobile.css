@@ -46,7 +46,8 @@ display: none;
 }
 #showCase .container .showCase-content{
     width: 100px;
-    margin-left: 100px;
+    margin-right: -25px;
+    margin-top: 80px;
 }
 .showCase-content h1,h2{
     font-size:small;
@@ -60,31 +61,39 @@ display: none;
 }
 #showCase .container .showCase-logo{
     padding: 0px;
+    display: flex;
+    align-items: center;
 }
 #showCase .container .showCase-logo img{
     height: 100px;
     width: 100px;
 }
+
 /*Home-recipes*/
 #Home-recipe{
     margin: 0px;
     margin-bottom: 0px;
     height: 250vh;
 }
-#Home-recipe .recipe-container > *:first-child,
-#Home-recipe .recipe-container > *:last-child{
-    display: grid;
+
+#Home-recipe .recipe-container {
     grid-template-columns: none;
+    grid-template-rows:  1fr;
 }
-#Home-recipe .recipe-container > *:last-child{
-    grid-column:2/span 2;
+
+#Home-recipe .recipe-container > *:first-child, #Home-recipe .recipe-container > *:last-child {
+grid-template-columns: none;
+    grid-column: auto;
 }
 #Home-recipe h1{
     font-size:large;
 }
 /*about*/
 #about{
-    height: 250vh;
+    height: 100%;
+}
+.about-lottie{
+  display:none;
 }
 .page-container {
     display: grid;
@@ -98,7 +107,9 @@ display: none;
 }
 
 .recipe{
-    font-size: smaller;
+    font-size: small;
+    width:300px;
+    height: 100%;
 }
 .recipe h2{
     font-size: smaller;
@@ -133,8 +144,11 @@ aside.recipe .button
 }
 /*login and sign*/
 #Sign{
-    padding-left: 60px;
     height: 60vh;
+}
+.mainForm{
+    width: 95%;
+    margin-left: 15vw;
 }
 
 #Sign h1 {
@@ -145,18 +159,21 @@ font-size: smaller;
     margin-left: -30px;
     padding-right: 100px;
 }
-/*Welcome*/
-#test{
-    font-size: 8px;
-}
 /*recipes*/
+.recipe img{
+    height: 80%;
+}
+.recipe-img{
+    padding: 0;
+}
 .video-container{
     display: grid;
+    height: 500px;
 }
 .recipeVideo{
-    height: 250px;
+    height: 220px;
     width: 300px;
-    margin-left: 25px;
+    margin-left: 30px;
 }
 .video1{
     grid-row: 1;
@@ -167,6 +184,7 @@ font-size: smaller;
 .video3{
     grid-row: 3;
 }
+
 #recipes .page-category
 {
     margin-left: -110px;
@@ -175,7 +193,7 @@ font-size: smaller;
     width: 250px;
     height: 200px;
     border-radius: 70%;
-    margin-left: -15px;
+    margin-left: 14px;
 }
 /*search*/
 #search{
@@ -184,7 +202,7 @@ font-size: smaller;
     padding-top: 20px;
     padding-bottom: 0px;
     margin-bottom: 0px;
-    height: 360vh;
+    height: 150%;
 
 }
 .search-container{
@@ -208,7 +226,7 @@ font-size: smaller;
 #Food-content{
     display: flex;
     grid-row: 2;
-    margin-left: 50px;
+    margin-left:75px;
     width: 350px;
     padding-bottom: 0px;
     margin-bottom: 0px;
@@ -222,8 +240,8 @@ margin-left: 50px;
 .categories{
     margin-left: 10px;
 }
-#recipes{
-    height: 320vh;
+.videos{
+    height: 100vh;
 }
 .page-category .recipe{
     padding-bottom: 0px;
